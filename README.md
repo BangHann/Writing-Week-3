@@ -1,5 +1,5 @@
 # Writing-Week-3
-## Array
+- ### Array
 - Array di js mampu menyimpan banyak data dan tipe data apapun
 ```js
 //script.js
@@ -13,7 +13,7 @@ console.log(arr[0]) //hallo
 console.log(arr[1]) //1
 console.log(arr[2]) //true
 ```
-### Property array 
+- ### Property array 
 - .length : melihat berapa banyak data dalam array
 ```js
 let arr = ["hallo", 1, true]
@@ -51,7 +51,7 @@ arrBuah.splice(2, 0, "buah naga") //jeruk, semangka, buah naga, rambutan, melon,
 ```js
 let slice = arrBuah.slice(2, 4) //buah naga, pepaya
 ```
-### looping array	
+- ### looping array	
 ```js
 let arrBuah = [
   "jeruk", 
@@ -135,7 +135,7 @@ console.log(arrMulti[2][1]) //JS
 arrMulti[2][1] = "CSS"
 console.log(arrMulti); //
 ```
-## Objects
+- ### Objects
 - Object adalah sebuah tempat penyimpanan data
 - membuat obj 
 ```js
@@ -154,7 +154,7 @@ let siswa = {
 
 console.log(siswa);
 ```
-### Cara akses object
+- ### Cara akses object
 - akses object ada 2 cara :
 1. dot notation console.log(siswa.nama)
 ```js
@@ -177,7 +177,7 @@ console.log(siswa["nomor handphone"]); //182367599
 let properti = "umur";
 console.log(siswa[properti]); //17
 ```
-### CreateKey
+- ### CreateKey
 - Menambahkan property baru ke dalam object
 ```js
 let buku = {
@@ -195,7 +195,7 @@ console.log(buku);
 buku["penerbit"] = "gramedia"; 
 console.log(buku); //judul: 'mantan jadi manten', penulis: 'hayati', 'jumlah halaman': 250, penerbit: "gramedia, tahun: 2022, terjual: 3000
 ```
-### assign js
+- ### assign js
 - Mengganti property 
 ```js
 let hewan = {
@@ -210,7 +210,7 @@ hewan.nama = "kelinci";
 hewan.warna = "kuning";
 console.log(hewan); //nama: 'kelinci', kaki: 4, warna: 'putih'
 ```
-### delete js
+- ### delete js
 - Menghapus salah satu isi object
 ```js
 let hewan = {
@@ -223,7 +223,7 @@ console.log(hewan); //nama:'kucing', kaki:4, warna: 'putih'
 delete hewan.warna;
 console.log(hewan); //nama:'kucing', kaki:4
 ```
-### method js
+- ### method js
 ```js
 const greeting = {
   welcome: function () {
@@ -253,8 +253,8 @@ console.log(Object.keys(siswa)); //[nama, umur, hobi]
 ```js
 console.log(Object.values(siswa)); //['dila, 17, 'membaca'
 ```
-### NestedObject
-- Nested object : menyimpan object di dalam object
+- ### NestedObject
+  - Nested object : menyimpan object di dalam object
 ```js
 let buku = {
   judul: "tips jago javascript",
@@ -276,7 +276,7 @@ let buku = {
 console.log(buku); //judul: 'tips jago javascript', penulis: {penulis1:{..}, penulis2:{..}}, tahun: 2022
 console.log(buku.penulis.penulis1.nama); //Rayhan
 ```
-### loop object
+- ### loop object
 ```js
 let siswa = {
   nama: "Reyhan",
@@ -289,7 +289,7 @@ for (let key in siswa) {
   console.log(key, ": ini dari key"); //Reyhan nama: ini dari key, 22 umur: ini dari key, jakarta asal: ini dari key
 }
 ```
-### array object
+- ### array object
 ```js
 let users = [
   {
@@ -318,8 +318,8 @@ let data = users.map((el) => {
   return el; //dila, audzan, dolton
 });
 ```
-## JavaScript Modules
-- JS Modules adalah cara untuk memisahkan kode ke file yang berbeda
+- ### JavaScript Modules
+  - JS Modules adalah cara untuk memisahkan kode ke file yang berbeda
 - Keuntungan : 
 1. mudah untuk mengelola kode
 2. kode ga numpuk di satu file
@@ -328,8 +328,8 @@ let data = users.map((el) => {
 1. tambah type="module" pada script utama
 2. siapkan script ke-2 untuk melakukan export
 3. lakukan import pada script utama
-- Export : barang keluar
-- Import : barang masuk
+  - Export : barang keluar
+  - Import : barang masuk
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -356,14 +356,14 @@ export let motor =["suzuki", "yamaha", "honda"]
 import {motor} from './indonesia.js';
 console.log(motor); //['suzuki', 'yamaha', 'honda']
 ```
-- export dapat dilakukan pada variable, function, class
-- kata kunci "export" dapat melakukan banyak export
-- "export" di tangkap (import) menggunakan kurung kurawal
-- "export default" cuma bisa 1 aja yg di export
-- "export default" ditangkap tanpa kurung kurawal
-## Recursive
-### function recursive
-- function recursive punya : 
+  - export dapat dilakukan pada variable, function, class
+  - kata kunci "export" dapat melakukan banyak export
+  - "export" di tangkap (import) menggunakan kurung kurawal
+  - "export default" cuma bisa 1 aja yg di export
+  - "export default" ditangkap tanpa kurung kurawal
+- ### Recursive
+  - ### function recursive
+  - function recursive punya : 
 1. base case -> titik paling kecil (berhenti)
 2. recursion case -> titik dia manggil diri dia sendiri
 ```js
@@ -376,15 +376,15 @@ function deretAngka(n){
   }
 } // deretAngka(7)
 ```
-## JS single thread, non-blocking, asyncronus
-### Single thread (1 jalur) 
-- single thread, ada 2:
+- ### JS single thread, non-blocking, asyncronus
+- ### Single thread (1 jalur) 
+  - single thread, ada 2:
 1. blocking : menunggu proses pertama selesai, baru bisa dilanjut ke proses kedua dan begitu seterusnya
 2. non-blocking : ketika proses pertama belum selesai dilakukan, kita bisa melanjutkan ke proses kedua tidak perlu menunggu proses pertama selesai
-### syncronus
-- syncronus : dilakukan secara berurutan
-### asyncronus
-- asyncronus : urutan perintah yang acak karena harus memanggilperintah yang belum selesai
+- ### syncronus
+  - syncronus : dilakukan secara berurutan
+- ### asyncronus
+  - asyncronus : urutan perintah yang acak karena harus memanggilperintah yang belum selesai
 - asyncronus ada 3 :
 1. callback
 ```js
@@ -398,11 +398,11 @@ console.log("C") //A C B
 ```
 2. promises : ketika proses sudah direncanakan/dijadwalkan, kemudian dipending dan ada 2 pilihan antara prosesnya di cancel atau buat jadwal proses baru
 3. asyn & await
-## Web Storage
-- Web storage : tempat penyimpanan sebuah web. Data disimpan secara local di browser user
-- WEB API : perantara yang dibuat oleh browser agar orang luar dapat mengakses browser juga bisa terkoneksi
-- Web storage juga bisa untuk akses data, untuk akses DOM
-- WEB API : DOM, setTimeout
+- ### Web Storage
+  - Web storage : tempat penyimpanan sebuah web. Data disimpan secara local di browser user
+  - WEB API : perantara yang dibuat oleh browser agar orang luar dapat mengakses browser juga bisa terkoneksi
+  - Web storage juga bisa untuk akses data, untuk akses DOM
+  - WEB API : DOM, setTimeout
 - yang bisa disimpan di Webstorage :
   - Preferensi user
   - Setting
